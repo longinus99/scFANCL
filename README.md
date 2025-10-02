@@ -3,11 +3,12 @@
 
 ## Table of Contents
 
-* [Model Overview](#model-overview)
-* [Clustering Performance](#clustering-performnace)
-* [Training scFANCL](#training-scfancl)
-* [Recommended Hyperparameters of scFANCL](#recomended_hyperparameters_of_scfancl)
-* [Datasets](#datasets)
+- [Model Overview](#model-overview)
+- [Clustering Performance](#clustering-performnace)
+- [Required Environment](#required-environment)
+- [Training scFANCL](#training-scfancl)
+- [Recommended Hyperparameters of scFANCL](#recomended-hyperparameters-of-scfancl)
+- [Datasets](#datasets)
 
 
 ## Model Overview
@@ -16,6 +17,12 @@
 
 ## Clustering Performance
 (내용 작성)
+
+
+## Required Environment
+Experiments were conducted with CUDA 12.2 (GPU) and Python 3.7 </br>
+Detail packages can be downloaded by `environment.yaml`
+
 
 ## Training scFANCL
 Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow these steps:
