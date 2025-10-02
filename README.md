@@ -6,7 +6,7 @@
 * [Model Overview](#model-overview)
 * [Clustering Performance](#clustering-performnace)
 * [Training scFANCL](#training-scfancl)
-* [Recommended Hyperparameters of scFANCL](#recomended-hyperparameters-of-scfancl)
+* [Recommended Hyperparameters of scFANCL](#recomended_hyperparameters_of_scfancl)
 * [Datasets](#datasets)
 
 
