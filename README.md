@@ -18,7 +18,15 @@
 (내용 작성)
 
 ## Training scFANCL
-(내용 작성)
+Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow these steps:
+1. Prepare Datasets File:<br>
+  Save your dataset file and change the `path` to your Data directory
+2. Configure the Dataset Type:<br>
+  In `main.py`, add the dataset name(without extension) to the appropriate list:
+  * For H5-format, add to the `h5_datasets` list.
+  * For mat-format, add to the `mat_datasets` list.
+  * For H5ad-format, you don't have have to do anything.
+
 
 ## Recommended Hyperparameters of scFANCL
 (내용 작성)
