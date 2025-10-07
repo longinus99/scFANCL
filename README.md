@@ -16,7 +16,19 @@
 
 
 ## Clustering Performance
-(내용 작성)
+
+Clustering performance of different models across various datasets, evaluated over 10 consecutive runs in terms of ACC, NMI and ARI. The best clustering result for each dataset is **bolded**.
+
+
+| Dataset       | scFANCL (ACC/NMI/ARI)      | Seurat (ACC/NMI/ARI)   | scDCCA (ACC/NMI/ARI)      | ScCCL (ACC/NMI/ARI)      | JojoSCL (ACC/NMI/ARI)      |
+|---------------|--------------------------|--------------------------|---------------------------|--------------------------|---------------------------|
+| **10X PBMC**      | **0.8345/0.7868/0.7822**        | 0.7717/0.7496/0.7242            | 0.7956/0.7322/0.7455             | 0.8327/0.7864/0.7820            | 0.8326/0.7856/0.7819             |
+| **Klein**   | **0.9447/0.8535/0.888**        | 0.8362/0.7709/0.8349            | 0.8887/0.8515/0.8304             | 0.8344/0.7827/0.7872      | 0.8312/0.7844/0.7797             |
+| **Camp1**   | **0.9272/0.8852/0.8679**        | 0.7245/0.7591/0.6817            | 0.7956/0.7956/0.7455             | 0.8263/0.8516/0.7953      | 0.8668/0.8147/0.8654             |
+| **Adam**   | **0.9645/0.9053/0.9246**        | 0.7002/0.7192/0.6749            | 0.7001/0.6751/0.5759             | 0.9620/0.9018/0.9193      | 0.9620/0.9012/0.92             |
+| **Melanoma**   | **0.7391/0.6663/0.6565**        | 0.5493/0.532/0.3628            | 0.5254/0.4926/0.3632             | 0.7113/0.6599/0.6092      | 0.7173/0.6672/0.6164             |
+
+
 
 
 ## Required Environment
@@ -36,7 +48,17 @@ Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL fo
 
 
 ## Recommended Hyperparameters of scFANCL
-(내용 작성)
+Many settings for training and model configuration are managed in `config.py`. This includes parameters such as the dataset name, number of training epochs, number of genes to select (`--select_gene`), learning rate, dropout rate, batch size, and more. For example, the following parameters are defined:
+
+- `--name`: Dataset name (default: "10X_PBMC")
+- `--cuda`: Cuda (default: "0")
+- `--epoch`: Number of training epochs (default: 200)
+- `--dropout`: Dropout rate (default: 0.9)
+- `--temperature`: Sharpness of similarity scores for instance-level contrastive module (default: 0.07)
+
+These arguments allow for flexible configuration of the training process and are parsed using Python's `argparse` module. For contrastive learning, larger batch sizes tend to improve training stability. In our experiments, we use a batch size of 256 for moderate datasets such as `10X_PBMC` and `adam`, and a batch size of 2,048 for larger datasets such as `Macosko` and `Shekhar`.
+
 
 ## Datasets
-(내용 작성)
+1. **Open the Google Drive link**: 
+2. **Select the files** (e.g., .h5 and .mat) and **download** them to your local machine.
