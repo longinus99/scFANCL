@@ -44,11 +44,11 @@ Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL fo
   In `main.py`, add the dataset name(without extension) to the appropriate list:
   * For H5-format, add to the `h5_datasets` list.
   * For mat-format, add to the `mat_datasets` list.
-  * For H5ad-format, you don't have have to do anything.
+  * For H5ad-format, you don't have to do anything.
 
 
 ## Recommended Hyperparameters of scFANCL
-Many settings for training and model configuration are managed in `config.py`. This includes parameters such as the dataset name, number of training epochs, number of genes to select (`--select_gene`), learning rate, dropout rate, batch size, and more. For example, the following parameters are defined:
+Many settings for training and model configuration are managed in `config.py`. This includes parameters such as the dataset name, number of training epochs, number of genes to select (`--select_gene`), learning rate, dropout rate, and more. For example, the following parameters are defined:
 
 - `--name`: Dataset name (default: "10X_PBMC")
 - `--cuda`: Cuda (default: "0")
@@ -56,9 +56,18 @@ Many settings for training and model configuration are managed in `config.py`. T
 - `--dropout`: Dropout rate (default: 0.9)
 - `--temperature`: Sharpness of similarity scores for instance-level contrastive module (default: 0.07)
 
-These arguments allow for flexible configuration of the training process and are parsed using Python's `argparse` module. For contrastive learning, larger batch sizes tend to improve training stability. In our experiments, we use a batch size of 256 for moderate datasets such as `10X_PBMC` and `adam`, and a batch size of 2,048 for larger datasets such as `Macosko` and `Shekhar`.
+These arguments allow for flexible configuration of the training process and are parsed using Python's `argparse` module. For contrastive learning, larger batch sizes tend to improve training stability. 
 
 
 ## Datasets
-1. **Open the Google Drive link**: 
-2. **Select the files** (e.g., .h5 and .mat) and **download** them to your local machine.
+**Download Data files from Data folder**
+
+The detailed statistics of these datasets are summarized in the table below.
+
+| Dataset | Cell | Gene | Cell Type | Sample|
+|---------|---------|---------|---------|---------|
+| 10X PBMC | 4271 | 16449 | 8 | Human PBMC |
+| Klein | 2717 | 24175 | 4 | Mouse Embryo Stem Cells |
+| Camp1 | 777 | 19020 | 7 | Human Liver |
+| Adam | 3660 | 23797 | 8 | Human Kidney |
+| Melanoma | 7186 | 23686 | 10 | Human Melanoma |
