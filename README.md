@@ -46,6 +46,11 @@ Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL fo
   * For mat-format, add to the `mat_datasets` list.
   * For H5ad-format, you don't have to do anything.
 
+3. Run the code
+   Use the command line to run script. For example, to run the 10X_PBMC dataset, execute:
+
+   ```bash
+   python main.py --name 10X_PBMC
 
 ## Recommended Hyperparameters of scFANCL
 Many settings for training and model configuration are managed in `config.py`. This includes parameters such as the dataset name, number of training epochs, number of genes to select (`--select_gene`), learning rate, dropout rate, and more. For example, the following parameters are defined:
