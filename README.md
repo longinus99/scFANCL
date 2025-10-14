@@ -60,7 +60,6 @@ These arguments allow for flexible configuration of the training process and are
 
 
 ## Datasets
-**Download Data files from Data folder**
 
 The detailed statistics of these datasets are summarized in the table below.
 
@@ -71,3 +70,7 @@ The detailed statistics of these datasets are summarized in the table below.
 | Camp1 | 777 | 19020 | 7 | Human Liver |
 | Adam | 3660 | 23797 | 8 | Human Kidney |
 | Melanoma | 7186 | 23686 | 10 | Human Melanoma |
+
+
+1. **Open the Google Drive link**: [Dataset directory](https://drive.google.com/drive/folders/1M0VaFZtQBDUqqXLGe8OUHzG1iIFNSTZE?usp=sharing).
+2. **Select the files**  and **download** them to your local machine.
