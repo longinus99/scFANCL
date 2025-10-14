@@ -7,7 +7,7 @@
 - [Clustering Performance](#clustering-performnace)
 - [Required Environment](#required-environment)
 - [Training scFANCL](#training-scfancl)
-- [Recommended Hyperparameters of scFANCL](#recomended-hyperparameters-of-scfancl)
+- [Recommended Hyperparameters of scFANCL](#recommended-hyperparameters-of-scfancl)
 - [Datasets](#datasets)
 
 
