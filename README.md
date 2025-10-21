@@ -37,7 +37,7 @@ Detail packages can be downloaded by `environment.yaml`
 
 
 ## Training scFANCL
-Our code supports both `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow these steps:
+Our code supports `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow these steps:
 1. Prepare Datasets File:<br>
   Save your dataset file and change the `path` to your Data directory
 2. Configure the Dataset Type:<br>
