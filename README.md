@@ -33,7 +33,10 @@ Clustering performance of different models across various datasets, evaluated ov
 
 ## Required Environment
 Experiments were conducted with CUDA 12.2 (GPU) and Python 3.7 </br>
-Detail packages can be downloaded by `environment.yaml`
+  ```bash
+git clone https://github.com/longinus99/scFANCL.git
+```
+
 
 
 ## Training scFANCL
