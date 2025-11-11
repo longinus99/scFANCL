@@ -38,7 +38,7 @@ git clone https://github.com/longinus99/scFANCL.git
 cd scFANCL
 cd model
 conda env create -f environment.yml
-conda ac
+conda activate scFANCL
 ```
 
 
