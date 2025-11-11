@@ -62,8 +62,8 @@ Our code supports `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow 
 ## Recommended Hyperparameters of scFANCL
 Many settings for training and model configuration are managed in `config.py`. This includes parameters such as the dataset name, number of training epochs, number of genes to select (`--select_gene`), learning rate, dropout rate, and more. For example, the following parameters are defined:
 
-- `--name`: Dataset name (default: "10X_PBMC")
-- `--cuda`: Cuda (default: "0")
+- `--name`: Dataset name (default: 10X_PBMC)
+- `--cuda`: Cuda (default: 0)
 - `--epoch`: Number of training epochs (default: 200)
 - `--dropout`: Dropout rate (default: 0.9)
 - `--temperature`: Sharpness of similarity scores for instance-level contrastive module (default: 0.07)
