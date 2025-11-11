@@ -16,7 +16,7 @@ if __name__ == "__main__":
     mat_datasets = []
 
 
-    path = "/home/longinus723/home/Public_scRNA_seq_data/dataset"
+    path = "put_your_dataset_forder_pathway"
     dataset = config.args.name
     gene_exp = []
     real_label = []
