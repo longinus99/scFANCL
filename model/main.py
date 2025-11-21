@@ -16,7 +16,7 @@ if __name__ == "__main__":
     mat_datasets = []
 
 
-    path = "put_your_dataset_forder_pathway"
+    path = "put_your_dataset_folder_pathway"
     dataset = config.args.name
     gene_exp = []
     real_label = []
