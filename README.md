@@ -36,9 +36,9 @@ Experiments were conducted with CUDA 12.2 (GPU) and Python 3.7 </br>
   ```bash
 git clone https://github.com/longinus99/scFANCL.git
 cd scFANCL
-cd model
 conda env create -f environment.yml
 conda activate scFANCL
+cd model
 ```
 
 
