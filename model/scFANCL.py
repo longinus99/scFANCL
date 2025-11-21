@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch
 import torch.nn.functional as F
 
-from  clu_Head import Clu_Head
+from  clu_head import Clu_Head
 
 class DataAug(nn.Module):
     def __init__(self, dropout=0.9):
