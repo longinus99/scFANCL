@@ -12,6 +12,14 @@
 
 
 ## Model Overview
+In this paper, we present scFANCL: Dual Contrastive Learning with False-negative Correction at the Cell Level for Single-cell RNA Sequencing Clustering. 
+Single-cell RNA sequencing enables cellular characterization at single-cell resolution, but its high dimensionality, sparsity, and noise make clustering challenging. 
+
+
+Owing to these challenges, several frameworks based on dual contrastive learning have been proposed. However, these methods operates by treating augmented views of the same cell are treated as positive pairs, while all remaining pairs are regarded as negatives, leading to false negatives that push cells of the same type apart and distort the embedding space. 
+
+
+To address this limitation, scFANCL applies a similarity-based threshold to mitigate false negative pairs, thereby preserving intra-cluster consistency while enhancing inter-cluster separation.
 <img width="1395" height="553" alt="Framework" src="https://github.com/user-attachments/assets/da86e61a-34a4-4c1c-b021-b8b2c7991a3d" />
 
 
@@ -28,7 +36,7 @@ Clustering performance of different models across various datasets, evaluated ov
 | **Adam**   | **0.9645/0.9053/0.9246**        | 0.7002/0.7192/0.6749            | 0.7001/0.6751/0.5759             | 0.9620/0.9018/0.9193      | 0.9620/0.9012/0.92             |
 | **Melanoma**   | **0.7391/0.6663/0.6565**        | 0.5493/0.532/0.3628            | 0.5254/0.4926/0.3632             | 0.7113/0.6599/0.6092      | 0.7173/0.6672/0.6164             |
 | **Chen**   | **0.7685/0.7081/0.6518**        | 0.49/0.69/0.58            | 0.6340/0.6633/0.6437             | 0.7048/0.6856/0.5932      | 0.6989/0.6824/0.5892             |
-| **HNSCC **   | **0.7586/0.7521/0.7974**        | 0.3943/0.5499/0.444            | 0.6082/0.6571/0.6750             | 0.6632/0.7467/0.6945      | 0.6793/0.7309/0.6916             |
+| **HNSCC**   | **0.7586/0.7521/0.7974**        | 0.3943/0.5499/0.444            | 0.6082/0.6571/0.6750             | 0.6632/0.7467/0.6945      | 0.6793/0.7309/0.6916             |
 
 
 ## Required Environment Setup
@@ -82,6 +90,8 @@ The detailed statistics of these datasets are summarized in the table below.
 | Camp1 | 777 | 19020 | 7 | Human Liver |
 | Adam | 3660 | 23797 | 8 | Human Kidney |
 | Melanoma | 7186 | 23686 | 10 | Human Melanoma |
+| Chen | 14437 | 23284 | 47 | Mouse Brain |
+| HNSCC | 54239 | 20000 | 10 | Human HNSCC |
 
 
 1. **Open the Google Drive link**: [Dataset directory](https://drive.google.com/drive/folders/1M0VaFZtQBDUqqXLGe8OUHzG1iIFNSTZE?usp=sharing).
