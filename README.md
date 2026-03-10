@@ -4,11 +4,12 @@
 ## Table of Contents
 
 - [Model Overview](#model-overview)
-- [Clustering Performance](#clustering-performnace)
-- [Required Environment](#required-environment)
+- [Clustering Performance](#clustering-performance)
+- [Required Environment Setup](#required-environment-setup)
+- [Datasets](#datasets)
+- [Data Format and Output](#data-format-and-output)
 - [Training scFANCL](#training-scfancl)
 - [Recommended Hyperparameters of scFANCL](#recommended-hyperparameters-of-scfancl)
-- [Datasets](#datasets)
 
 
 ## Model Overview
@@ -49,6 +50,34 @@ conda activate scFANCL
 cd model
 ```
 
+## Datasets 
+
+The detailed statistics of these datasets are summarized in the table below.
+
+| Dataset | Cell | Gene | Cell Type | Sample|
+|---------|---------|---------|---------|---------|
+| 10X PBMC | 4271 | 16449 | 8 | Human PBMC |
+| Klein | 2717 | 24175 | 4 | Mouse Embryo Stem Cells |
+| Camp1 | 777 | 19020 | 7 | Human Liver |
+| Adam | 3660 | 23797 | 8 | Human Kidney |
+| Melanoma | 7186 | 23686 | 10 | Human Melanoma |
+| Chen | 14437 | 23284 | 47 | Mouse Brain |
+| HNSCC | 54239 | 20000 | 10 | Human HNSCC |
+
+
+1. **Open the Google Drive link**: [Dataset directory](https://drive.google.com/drive/folders/1M0VaFZtQBDUqqXLGe8OUHzG1iIFNSTZE?usp=sharing).
+2. **Select the files**  and **download** them to your local machine.
+   
+The metadata for the corresponding dataset can be obtained from each GEO entry.
+
+
+
+## Data format and output
+
+* Applying to new data, Data must include at least the following two components: a raw gene–cell expression matrix and cell type annotations.
+* Unless unavoidable circumstances arise, the **h5ad** format is recommended.
+* During training, the model uses the **cell_type** column in **obs** from the h5ad file. The resulting embeddings are stored in **result["features"]**, which can then be saved in **.obsm** for further downstream task.
+
 
 
 ## Training scFANCL
@@ -79,20 +108,4 @@ Many settings for training and model configuration are managed in `config.py`. T
 These arguments allow for flexible configuration of the training process and are parsed using Python's `argparse` module. For contrastive learning, larger batch sizes tend to improve training stability. 
 
 
-## Datasets
 
-The detailed statistics of these datasets are summarized in the table below.
-
-| Dataset | Cell | Gene | Cell Type | Sample|
-|---------|---------|---------|---------|---------|
-| 10X PBMC | 4271 | 16449 | 8 | Human PBMC |
-| Klein | 2717 | 24175 | 4 | Mouse Embryo Stem Cells |
-| Camp1 | 777 | 19020 | 7 | Human Liver |
-| Adam | 3660 | 23797 | 8 | Human Kidney |
-| Melanoma | 7186 | 23686 | 10 | Human Melanoma |
-| Chen | 14437 | 23284 | 47 | Mouse Brain |
-| HNSCC | 54239 | 20000 | 10 | Human HNSCC |
-
-
-1. **Open the Google Drive link**: [Dataset directory](https://drive.google.com/drive/folders/1M0VaFZtQBDUqqXLGe8OUHzG1iIFNSTZE?usp=sharing).
-2. **Select the files**  and **download** them to your local machine.
