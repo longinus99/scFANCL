@@ -86,9 +86,9 @@ Our code supports `.h5`, `.mat` and `.h5ad` file formats. To run scFANCL follow 
   Save your dataset file and change the `path` at `main.py` to your Data directory
 2. Configure the Dataset Type:<br>
   In `main.py`, add the dataset name(without extension) to the appropriate list:
-  * For H5-format, add to the `h5_datasets` list.
-  * For mat-format, add to the `mat_datasets` list.
-  * For H5ad-format, you don't have to do anything.
+    * For H5-format, add to the `h5_datasets` list.
+    * For mat-format, add to the `mat_datasets` list.
+    * For H5ad-format, you don't have to do anything.
 
 3. Run the code
    Use the command line to run script. For example, to run the 10X_PBMC dataset, execute:
