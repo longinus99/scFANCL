@@ -74,7 +74,7 @@ if __name__ == "__main__":
     print("NMI:" + str(results["nmi"]))
     print("ARI:" + str(results["ari"]))
 
-    # to save embedding use undercoder
+    # to save embedding use under code
     # embedding = results["features"]
     # reducer = umap.UMAP(n_neighbors=15, min_dist=0.1, metric="cosine", random_state=9999)
     # embedding_umap = reducer.fit_transform(embedding)
