@@ -1,4 +1,4 @@
-# scFANCL: Dual Contrastive Learning with False-negative correction at Cell level for single-cell RNA sequence Clustering
+# scFANCL: Dual Contrastive Learning with False-negative correction at Cell level for single-cell RNA-seq Clustering
 
 
 ## Table of Contents
