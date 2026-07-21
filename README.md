@@ -108,4 +108,15 @@ Many settings for training and model configuration are managed in `config.py`. T
 These arguments allow for flexible configuration of the training process and are parsed using Python's `argparse` module. For contrastive learning, larger batch sizes tend to improve training stability. 
 
 
+## Citation
+If oyu find **scFANCL** useful in your research, please cite the following work:
+```bibtex
+@article{choi2026scfancl,
+  title={scFANCL: Dual contrastive learning with false-negative correction at cell level for single-cell RNA-seq clustering},
+  author={Choi, Gunho and Oh, Minsik},
+  journal={BMC genomics},
+  year={2026},
+  publisher={Springer}
+}
+```
 
